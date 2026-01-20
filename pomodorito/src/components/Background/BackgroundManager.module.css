@@ -1,0 +1,93 @@
+/* ... MANTÉN LOS ESTILOS DEL CONTENEDOR ANTERIORES ... */
+.container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  color: white;
+}
+
+/* Modificamos backgroundImage para que soporte video full screen */
+.backgroundImage {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  transform: translate(-50%, -50%);
+  z-index: -2;
+  object-fit: cover; /* CLAVE: hace que el video cubra todo sin deformarse */
+}
+
+/* ... MANTÉN EL OVERLAY Y CONTENT IGUAL ... */
+.overlay {
+    position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.5); z-index: -1;
+}
+
+.content {
+    position: relative; z-index: 1; height: 100%; padding: 2rem;
+}
+
+/* ESTILOS DEL MENÚ NUEVO */
+.dock {
+  position: fixed; bottom: 2rem; right: 2rem; z-index: 50;
+  display: flex; flex-direction: column; align-items: flex-end; gap: 10px;
+}
+
+.dockButton {
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: white; padding: 12px 24px; border-radius: 50px;
+  cursor: pointer; font-weight: bold; transition: 0.3s;
+  font-size: 1rem;
+}
+
+.dockButton:hover { background: rgba(0, 0, 0, 0.9); transform: scale(1.05); }
+
+.selectorMenu {
+  background: rgba(20, 20, 20, 0.95);
+  border: 1px solid #333;
+  padding: 1rem; border-radius: 16px;
+  width: 320px;
+  max-height: 400px;
+  overflow-y: auto;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+}
+
+.topicsGrid {
+  display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 1rem;
+}
+
+.topicBtn {
+  background: #333; border: none; color: #ddd;
+  padding: 6px 12px; border-radius: 20px;
+  cursor: pointer; font-size: 0.85rem; transition: 0.2s;
+}
+
+.topicBtn:hover { background: #555; color: white; }
+
+.separator { border: 0; border-top: 1px solid #444; margin: 0.5rem 0 1rem 0; }
+
+.resultsGrid {
+  display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px;
+}
+
+.thumbBtn {
+  height: 80px; width: 100%;
+  border: 2px solid transparent; border-radius: 8px;
+  background-size: cover; background-position: center;
+  cursor: pointer; transition: 0.2s; opacity: 0.7;
+}
+
+.thumbBtn:hover { opacity: 1; transform: scale(1.02); }
+
+.activeThumb {
+  border-color: #4ade80; opacity: 1;
+}
+
+.errorMsg { color: #ff6b6b; font-size: 0.9rem; text-align: center; }
+.loadingText { text-align: center; color: #888; font-style: italic; width: 100%; }

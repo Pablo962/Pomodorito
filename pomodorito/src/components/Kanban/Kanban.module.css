@@ -1,0 +1,144 @@
+.boardContainer {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form {
+  display: flex;
+  gap: 10px;
+  background: rgba(20, 20, 20, 0.6);
+  backdrop-filter: blur(10px);
+  padding: 15px;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.input {
+  flex: 1;
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+  color: white;
+  padding: 10px;
+  font-size: 1rem;
+}
+.input:focus { outline: none; border-color: #4ade80; }
+
+.addBtn {
+  background: #4ade80;
+  color: #004d20;
+  border: none;
+  padding: 0 24px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.addBtn:hover { background: #22c55e; }
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  align-items: start;
+}
+
+.column {
+  background: rgba(20, 20, 20, 0.6);
+  backdrop-filter: blur(12px);
+  border-radius: 12px;
+  padding: 1rem;
+  min-height: 300px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  display: flex;
+  flex-direction: column;
+}
+
+.columnTitle {
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.cardList {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex: 1; 
+  
+ 
+  overflow-y: auto;       
+  max-height: 55vh;       
+  padding-right: 5px;     
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 255, 255, 0.3) transparent;
+}
+
+
+.cardList::-webkit-scrollbar {
+  width: 6px;
+}
+
+.cardList::-webkit-scrollbar-track {
+  background: transparent; 
+}
+
+.cardList::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.2); 
+  border-radius: 10px; 
+}
+
+.cardList::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(255, 255, 255, 0.4); 
+}
+
+
+.card {
+  background: rgba(255, 255, 255, 0.08);
+  padding: 12px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: grab;
+  transition: transform 0.2s, background 0.2s;
+  border: 1px solid transparent;
+}
+
+.card:hover {
+  background: rgba(255, 255, 255, 0.12);
+  transform: translateY(-2px);
+  border-color: rgba(255,255,255,0.1);
+}
+
+.card:active { cursor: grabbing; }
+
+.cardContent p { margin: 0; font-size: 0.95rem; line-height: 1.4; }
+
+.deleteBtn {
+  background: transparent;
+  border: none;
+  color: #ff6b6b;
+  font-size: 1.2rem;
+  cursor: pointer;
+  opacity: 0.5;
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+.deleteBtn:hover { opacity: 1; background: rgba(255, 107, 107, 0.1); }
+
+.emptyPlaceholder {
+    color: rgba(255,255,255,0.2);
+    text-align: center;
+    margin-top: 2rem;
+    font-size: 0.9rem;
+    font-style: italic;
+    border: 2px dashed rgba(255,255,255,0.1);
+    padding: 1rem;
+    border-radius: 8px;
+}
