@@ -4,9 +4,9 @@ import TaskCard from './TaskCard';
 import styles from './Kanban.module.css';
 
 const COLUMNS = [
-  { id: 'todo', title: '📝 Pendiente', color: '#ff6b6b' },
-  { id: 'doing', title: '🔥 En Curso', color: '#feca57' },
-  { id: 'done', title: '✅ Terminado', color: '#4ade80' }
+  { id: 'todo', title: 'Pendiente', color: '#ff6b6b' },
+  { id: 'doing', title: 'En Curso', color: '#feca57' },
+  { id: 'done', title: 'Terminado', color: '#4ade80' }
 ];
 
 export default function Board() {

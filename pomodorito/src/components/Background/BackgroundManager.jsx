@@ -3,11 +3,11 @@ import { useBackground } from '../../../src/hooks/useBackgroud';
 import styles from './BackgroundManager.module.css';
 
 const TOPICS = [
-  { id: 'rain', label: '🌧️ Lluvia' },
-  { id: 'cyberpunk', label: '🤖 Cyberpunk' },
-  { id: 'coffee', label: '☕ Café' },
-  { id: 'nature', label: '🍃 Naturaleza' },
-  { id: 'fireplace', label: '🔥 Chimenea' }
+  { id: 'rain', label: 'Lluvia' },
+  { id: 'nature', label: 'Naturaleza' },
+  { id: 'fireplace', label: 'Chimenea' },
+  { id: 'kittens', label: 'Gatitos' },
+  { id: 'puppies', label: 'Perritos' }
 ];
 
 export default function BackgroundManager({ children }) {
@@ -38,7 +38,7 @@ export default function BackgroundManager({ children }) {
           className={styles.dockButton} 
           onClick={() => setShowSelector(!showSelector)}
         >
-          {showSelector ? '✖ Cerrar' : '🎨 Fondo'}
+          {showSelector ? 'Cerrar' : 'Fondo'}
         </button>
 
         {showSelector && (

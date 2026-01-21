@@ -84,7 +84,6 @@
   margin: 0;
 }
 
-/* Botón flotante cuando se minimiza */
 .minimizedBtn {
   position: fixed;
   bottom: 2rem;

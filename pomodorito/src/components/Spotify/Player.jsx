@@ -29,7 +29,7 @@ export default function Player() {
   return (
     <div className={styles.container}>
       <div className={styles.header}>
-        <span className={styles.title}>🎧 Spotify</span>
+        <span className={styles.title}>Spotify</span>
         {spotifyId && (
             <div className={styles.actions}>
                  <button onClick={() => setIsMinimized(true)} className={styles.iconBtn}>_</button>
